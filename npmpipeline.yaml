@@ -1,6 +1,6 @@
 ---
 pool:
-  vmImage: ubuntu_latest
+  vmImage: ubuntu-latest
   name: "Azure pipelines"
 trigger:
   - main
@@ -13,6 +13,9 @@ steps:
   - script: |
       sudo apt install npm
     displayName: 'npm install'
+  - script: git clone https://github.com/Azure-Samples/js-e2e-express-server
   - script: |
-      npm run build
+      - cd js-e2e-express-server
+      - npm install package.json
+      - npm run build
     displayName: 'npm build'
