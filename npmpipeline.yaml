@@ -13,7 +13,6 @@ steps:
   - script: |
       sudo apt install npm
     displayName: 'npm install'
-  - script: git clone https://github.com/Azure-Samples/js-e2e-express-server
   - script: |
       - cd js-e2e-express-server
       - npm install package.json
