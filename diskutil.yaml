@@ -1,0 +1,9 @@
+---
+pool: 
+  vmImage: ubuntu-latest
+trigger:
+-  main
+steps:
+- script: sudo df -h
+- script: sudo apt update
+- script: echo hii how r u
